@@ -47,7 +47,7 @@ int env_set_key(char *key, char *value, data_of_program *data)
 		return (1);
 
 	/* obtains the leng of the variable requested */
-	key_len = str_len(key);
+	key_len = str_length(key);
 
 	for (i = 0; data->env[i]; i++)
 	{ /* Iterates through the environ and check for coincidence of the vame */

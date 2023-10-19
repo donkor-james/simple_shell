@@ -38,7 +38,7 @@ int execute(data_of_program *data)
 		{ /* I am the father, I wait and check the exit stat of the child */
 			wait(&stat);
 			if (WIFEXITED(stat))
-				errno = WEXITstatus(stat);
+				errno = WEXITSTATUS(stat);
 			else if (WIFSIGNALED(stat))
 				errno = 128 + WTERMSIG(stat);
 		}
