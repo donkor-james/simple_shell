@@ -32,7 +32,7 @@ int builtin_cd(data_of_program *data)
 {
 	char *dir_home = env_get_key("HOME", data), *dir_old = NULL;
 	char old_dir[128] = {0};
-	int err_code = 0;
+	int error_code = 0;
 
 	if (data->tokens[1])
 	{
@@ -40,11 +40,11 @@ int builtin_cd(data_of_program *data)
 		{
 			dir_old = env_get_key("OLDPWD", data);
 			if (dir_old)
-				err_code = set_work_directory(data, dir_old);
+				error_code = set_work_directory(data, dir_old);
 			_print(env_get_key("PWD", data));
 			_print("\n");
 
-			return (err_code);
+			return (error_code);
 		}
 		else
 		{
@@ -109,7 +109,7 @@ int builtin_help(data_of_program *data)
 	if (data->tokens[2] != NULL)
 	{
 		errno = E2BIG;
-		perr(data->command_name);
+		perror(data->command_name);
 		return (5);
 	}
 	mensajes[1] = HELP_EXIT_MSG;
@@ -127,9 +127,9 @@ int builtin_help(data_of_program *data)
 			return (1);
 		}
 	}
-	/*if there is no match, print err and return -1 */
+	/*if there is no match, print error and return -1 */
 	errno = EINVAL;
-	perr(data->command_name);
+	perror(data->command_name);
 	return (0);
 }
 
