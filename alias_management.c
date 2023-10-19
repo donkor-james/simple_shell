@@ -50,7 +50,7 @@ char *get_alias(data_of_program *data, char *name)
 	if (name == NULL || data->alias_list == NULL)
 		return (NULL);
 
-	alias_len = str_len(name);
+	alias_len = str_length(name);
 
 	for (i = 0; data->alias_list[i]; i++)
 	{ /* Iterates through the environ and check for coincidence of the varname */

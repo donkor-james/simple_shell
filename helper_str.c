@@ -141,7 +141,7 @@ char *str_concat(char *string1, char *string2)
 void str_reverse(char *string)
 {
 
-	int i = 0, len = str_len(string) - 1;
+	int i = 0, len = str_length(string) - 1;
 	char hold;
 
 	while (i < len)

@@ -15,7 +15,7 @@ char *env_get_key(char *key, data_of_program *data)
 		return (NULL);
 
 	/* obtains the leng of the variable requested */
-	key_len = str_len(key);
+	key_len = str_length(key);
 
 	for (i = 0; data->env[i]; i++)
 	{ /* Iterates through the environ and check for coincidence of the vame */
@@ -65,7 +65,7 @@ int env_set_key(char *key, char *value, data_of_program *data)
 	data->env[i] = str_concat(data->env[i], value);
 
 	if (is_new_key)
-	{	/* if the variable is new, it is create at end of actual list and we need*/
+	{ /* if the variable is new, it is create at end of actual list and we need*/
 		/* to put the NULL value in the next position */
 		data->env[i + 1] = NULL;
 	}
