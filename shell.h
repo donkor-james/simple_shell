@@ -188,7 +188,7 @@ int _print_error(int errorcode, data_of_program *data);
 /*======== helpers_string.c ========*/
 
 /* Counts the number of characters of a string */
-int str_len(char *string);
+int str_length(char *string);
 
 /* Duplicates an string */
 char *str_duplicate(char *string);
