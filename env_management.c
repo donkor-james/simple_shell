@@ -87,7 +87,7 @@ int env_remove_key(char *key, data_of_program *data)
 		return (0);
 
 	/* obtains the leng of the variable requested */
-	key_len = str_len(key);
+	key_len = str_length(key);
 
 	for (i = 0; data->env[i]; i++)
 	{ /* iterates through the environ and checks for coincidences */
