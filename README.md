@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a simple command line interpreter (shell) developed in C. It allows users to execute commands and interact with the UNIX operating system. The shell supports various functionalities that enhance the user experience and provide a basic understanding of how shells operate.
+This project is a simple command line interpreter (shell) developed with C as my second project in ALX_SE. It allows users to execute commands and interact with the UNIX operating system. The shell supports various functionalities that enhance the user experience and provide a basic understanding of how shells operate.
 
 ## Features
 
